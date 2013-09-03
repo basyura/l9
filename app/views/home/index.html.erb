@@ -1,2 +1,16 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<h1>Logs</h1>
+<br>
+<table class="table table-striped"">
+  <tr>
+    <th>date</th>
+    <th>username</th>
+    <th>message</th>
+  </tr>
+  <% @logs.each do |log| %>
+    <tr>
+      <td><span class="text-info"><%= log.date.strftime("%Y/%m/%d %H:%M:%S") %></span></td>
+      <td><span class="text-success"><%= log.username %></span></td>
+      <td><span class=""><%= log.message %></span></td>
+    </tr>
+  <% end %>
+</table>
