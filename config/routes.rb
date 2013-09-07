@@ -1,10 +1,11 @@
 L9::Application.routes.draw do
-  get "home/index"
+
+  get "/" => "home#index"
+
   post "/api/create" => "api#create", :constraints => {:format => 'json'}
 
   get "/search" => "home#search"
   get "/:id" => "home#index"
-
   get 'page/:page' => 'home#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
