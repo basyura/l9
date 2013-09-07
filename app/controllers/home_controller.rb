@@ -4,7 +4,7 @@ class HomeController < ApplicationController
   end
 
   def search
-    @logs = Log.where('message like ?', "%"+params[:q]+"%")
+    @logs = Log.search_message(params[:q])
     render :action => :index
   end
 end
