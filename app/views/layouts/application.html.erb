@@ -44,7 +44,7 @@
           <a class="brand" href="/" style="margin-left:-5px;">Logs</a>
         </div>
         <div class="span8" align="right">
-          <%= form_tag :home_search, :method => :get, :class => 'form-search' do %>
+          <%= form_tag :search, :method => :get, :class => 'form-search' do %>
             <p><%= text_field_tag "q", params[:q], :class => 'input-medium search-query', :style => "margin-top:5px;" %>
             <%= submit_tag "Search", class: 'btn' %></p>
           <% end %>

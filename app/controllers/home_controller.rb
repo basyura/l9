@@ -4,7 +4,7 @@ class HomeController < ApplicationController
   end
 
   def search
-    @logs = Log.search_message(params[:q])
+    @logs = Log.search_message(params[:q], params[:page])
     render :action => :index
   end
 end
