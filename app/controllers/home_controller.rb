@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @logs = Log.find_of_month(params[:id])
+    @logs = Log.find_of_month(params[:id], params[:page])
   end
 
   def search
