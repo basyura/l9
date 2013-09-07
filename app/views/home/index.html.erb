@@ -1,7 +1,9 @@
 
-<div class="pagination" style="margin-top:-10px">
-  <%= paginate @logs %> 
-</div>
+<% unless @logs.empty? %>
+  <div class="pagination" style="margin-top:-10px">
+    <%= paginate @logs %> 
+  </div>
+<% end %>
 
 <table class="table table-striped"">
   <tr>
