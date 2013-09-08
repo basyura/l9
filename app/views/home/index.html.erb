@@ -20,3 +20,6 @@
   <% end %>
 </table>
 
+<% unless @logs.empty? %>
+    <%= paginate @logs %> 
+<% end %>
